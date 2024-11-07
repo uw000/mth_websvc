@@ -4,6 +4,9 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+ALLOWED_HOSTS = ['mthouse', '192.168.50.78']
+
+
 # 데이터베이스 설정
 DATABASES = {
     'default': {
@@ -94,10 +97,10 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 
 ROOT_URLCONF = 'myproject.urls'
 
-#  # Static files (CSS, JavaScript, Images)
-#  STATIC_URL = '/static/'
-#  STATIC_ROOT = BASE_DIR / 'static'
+# Static files (CSS, JavaScript, Images)
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'static'
 
-#  # Media files (User-uploaded content)
-#  MEDIA_URL = '/media/'
-#  MEDIA_ROOT = BASE_DIR / 'media'
+# Media files (User-uploaded content)
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
