@@ -1,6 +1,6 @@
 from django.db import models
 
-class mth_info(models.Model):
+class VacantHome(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
     location = models.CharField(max_length=100)
@@ -17,7 +17,7 @@ class mth_info(models.Model):
         return f"{self.title} ({self.location})"
     
 
-class comunity_board(models.Model):
+class CommunityBoard(models.Model):
     user = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     content = models.TextField()

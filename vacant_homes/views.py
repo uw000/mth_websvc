@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import mth_info
+from .models import VacantHome
 
 def search_results(request):
     location = request.GET.get('location')
@@ -7,7 +7,7 @@ def search_results(request):
     type = request.GET.get('type')
     size = request.GET.get('size')
 
-    results = mth_info.objects.all()
+    results = VacantHome.objects.all()
     if location:
         results = results.filter(location__icontains=location)
     if address:
